@@ -1,0 +1,165 @@
+
+.d-flex {
+  display: flex;
+}
+.flex-1 {
+  flex: 1
+}
+.jc-center {
+  justify-content: center;
+}
+.ai-center {
+  align-items: center;
+}
+.jc-between {
+  justify-content: space-between;
+}
+.jc-around {
+  justify-content: space-around;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.music-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  max-width: 400px;
+}
+.music-list {
+  max-height: 250px;
+  overflow: hidden;
+  overflow-y: auto;
+  background-color: #fff;
+  .activeSong {
+    color:orange;
+  }
+}
+.songTitle {
+
+  display: inline-block;
+  width: 212px;
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.control-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.audio-box {
+  color: #000;
+  .time {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .process-box {
+    cursor: pointer;
+    width: 180px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-right: 10px;
+    .remember {
+      height: 16px;
+      width: 360.88px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .anim-rem {
+      animation: rollLeft 10s linear infinite;
+    }
+  }
+  .totalProcess {
+    height: 3px;
+    background: #000;
+    position: relative;
+    border-radius: 2px;
+    width:100%;
+    display: inline-block;
+    .playProcess {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0px;
+      height: 3px;
+      background: #ffb929;
+      border-radius: 2px;
+      &:after {
+        position: absolute;
+        top: -2px;
+        right: 0px;
+        content: ".";
+        float: right;
+        width: 7px;
+        height: 7px;
+        border-radius: 50px;
+        background: #ffb929;
+      }
+    }
+  }
+}
+.list-item {
+  &:hover{
+    cursor: pointer;
+  }
+}
+.control-icon {
+  font-size: 18px;
+}
+.music-body {
+  position: relative;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  .music-control{
+    width: 400px;
+    display: flex;
+    .music-image {
+      width: 66px;
+      height: 66px;
+      background: url("https://www.coco727.com/_nuxt/img/audio.b9ad38f.jpg") no-repeat;
+      background-size: 66px 66px;
+      position: relative;
+      .music-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 30px;
+      }
+    }
+  }
+  .music-expand {
+    position: absolute;
+    top: 0;
+    right: -18px;
+    height: 100%;
+    width: 18px;
+    line-height: 66px;
+    background-color: #e6e6e6;
+    border-radius: 0 6px 6px 0 !important;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
